@@ -194,6 +194,9 @@ Assistant: Artificial intelligence is a field of computer science
 that focuses on creating systems capable of performing tasks
 that normally require human intelligence.
 ```
+## Demo
+
+![CLI Demo](screenshots/demo.png)
 
 Responses are generated **in real time (streaming)** directly in the terminal.
 
