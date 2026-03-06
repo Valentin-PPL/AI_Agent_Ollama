@@ -1,11 +1,7 @@
-from langchain_ollama import ChatOllama
-from langchain_core.messages import HumanMessage, SystemMessage
+from agent.agent import ask_llm
 
 def main():
-    model = ChatOllama(
-        model="llama3",
-        temperature=0
-    )
+
     print("Welcome! I'm your AI assistant. Type 'quit' to exit.\n"
           "You can ask me to perform calculations or chat with me")
 
@@ -19,14 +15,7 @@ def main():
             continue
 
         print("\nAssistant: ", end="", flush=True)
-
-        messages = [HumanMessage(content=user_input)]
-
-        for chunk in model.stream(messages):
-            if chunk.content:
-                print(chunk.content, end="", flush=True)
-
-        print()  # newline la final
+        ask_llm(user_input)
 
 if __name__ == "__main__":
     main()

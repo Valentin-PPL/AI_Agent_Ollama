@@ -1,4 +1,6 @@
+.idea/
+README template.md
+README_ro.md
+.env
 .venv/
 __pycache__/
-*.pyc
-.env
